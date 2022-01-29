@@ -1,0 +1,16 @@
+version: "3"
+services:
+  denis:
+    image: "dgrechin/minecraft"
+    volumes:
+      - ./DenisGrechin/server.properties:/root/minecraft/server.properties:ro
+      - ./DenisGrechin/World:/root/minecraft/worlds/Denis Grechin
+    ports:
+      - 19132:19132/udp
+  oneblock:
+    image: "dgrechin/minecraft"
+    volumes:
+      - ./OneBlockSkyblock/server.properties:/root/minecraft/server.properties:ro
+      - ./OneBlockSkyblock/World:/root/minecraft/worlds/One Block Skyblock
+    ports:
+      - 29132:19132/udp
